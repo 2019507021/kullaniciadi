@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class kullanici_adi {
+    public static void main(String[] args) {
+        String k_adi, passWord;
+        String sifirlama, newPassword;
+
+        Scanner inp = new Scanner(System.in);
+        System.out.print("Kullanıcı Adı: ");
+        k_adi = inp.nextLine();
+
+        System.out.print("Şifre: ");
+        passWord = inp.nextLine();
+
+        if(k_adi.equals("patika") && passWord.equals("java")){
+            System.out.print("Giriş Yaptınız.");
+        }else{
+            System.out.println("Kullanıcı adınız ya da şifreniz hatalı.Yeni şifre\nisterseniz \"yes\" , istemezseniz \"no\" yazın.");
+            sifirlama = inp.nextLine();
+
+            if(sifirlama.equals("no")){
+                System.out.print("Giriş sonlandırıldı");
+            }else if(sifirlama.equals("yes")){
+                System.out.println("Yeni şifrenizi giriniz");
+                newPassword = inp.nextLine();
+
+                if(newPassword.equals("java") || newPassword.equals(passWord)){
+                    System.out.println("Şifre oluşturulamadı. Lütfen başka bir şifre giriniz");
+                }else{
+                    System.out.println("Yeni şifre oluşturuldu");
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+}
