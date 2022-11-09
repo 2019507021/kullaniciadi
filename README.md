@@ -1,0 +1,2 @@
+# kullaniciadi
+k_adi
